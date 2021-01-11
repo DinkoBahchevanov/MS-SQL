@@ -1,0 +1,24 @@
+CREATE table COUNTRIES
+(
+country_code char(3),
+name varchar(40),
+population int
+)
+
+ALTER TABLE COUNTRIES
+ADD phone_code integer check(phone_code between 100 and 900);
+
+INSERT INTO 
+	COUNTRIES(country_code, name, population, phone_code)
+	VALUES
+	-- not working with Bulgarian syntax
+			 ('BGR', 'Bulgaria', 7500000, 359);
+
+UPDATE COUNTRIES
+SET population = 6000000;
+
+TRUNCATE TABLE COUNTRIES;
+
+DROP TABLE COUNTRIES;
+
+DROP DATABASE databasedankan;
