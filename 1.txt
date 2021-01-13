@@ -1,5 +1,6 @@
 CREATE database TESTDB;
 
+-- In the requirement is not mentioned 'not null', so columns can be null
 CREATE table COUNTRIES
 (
 country_code char(3),
